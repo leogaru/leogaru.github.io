@@ -1,0 +1,91 @@
+header {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  background-color: white;
+  box-shadow: 10px #dedede;
+  position:fixed;
+  left:0;
+  top:0;
+  z-index: 2;
+}
+#hDesktop {
+  height: 85px;
+}
+#hMobile{
+  height: 65px;
+}
+header>div#LogoDesktop {
+      background-color: white;
+      width: 195px;
+      height: 75px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+}
+
+header>div#LogoMobile {
+  background-color: white;
+  width: 125px;
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#LogoStyleDesktop {
+  height:80px;
+  width: auto;
+  box-shadow: -7px 7px 5px rgb(24 25 108);
+}
+
+//dimensioni del logo sullo smarthone
+#LogoStyleMobile {
+  height:65px;
+  width: auto;
+  box-shadow: -7px 7px 5px rgb(24 25 108);
+}
+
+header>div#Title {
+      background-color: #f2d15875;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      -moz-box-shadow:  0px  8px 5px #f2d15866;
+      -webkit-box-shadow:  0px  8px 5px #f2d15866;
+      filter: progid:DXImageTransform.Microsoft.Shadow(color='#f2d15866', Direction=135, Strength=10);
+      box-shadow: 0px 8px 5px #f2d15866;
+}
+#desktop,#mobile {
+  margin-top: 80px;
+  max-height: calc(100% - 135px);
+}
+
+
+footer {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  background-color: white;
+  height: 50px;
+  box-shadow: 10px #dedede;
+  position:fixed;
+  bottom: 0;
+  left: 0;
+}
+#divFooter{
+  opacity: 1;
+  height: 50px;
+  width: 100%;
+  background: -webkit-linear-gradient(rgba(243, 223, 150, 0.459), #f2d15866);
+  -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0));
+  -webkit-mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+  mask-image: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0));
+  mask-size: 100% 100%;
+  mask-repeat: no-repeat;
+}
+body{
+  max-height: 100% !important;
+}

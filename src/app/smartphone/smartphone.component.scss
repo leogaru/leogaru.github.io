@@ -1,0 +1,80 @@
+#bodySmartphone {
+    margin: 0px;
+    max-height: calc(100% - 115px);
+    height: calc(130% - 115px);
+    padding-top: 65px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+.topButton {
+      border: 2px solid #18196c;
+      cursor: pointer;
+      background-color: #f2d15866;
+      color:rgb(24 25 108);
+      font: 130% Arial, Helvetica, sans-serif, 'Arial Narrow Bold', monospace;
+}
+
+//#303134 grigio scuro
+
+#page{
+    width:100%; 
+    height:100%;
+    display: flex;
+    justify-content: center;
+    overflow: auto;
+    margin-top: 15px;
+}
+
+#innerPage{
+    width: 80%;
+    margin-top: 10px;
+}
+.dot {
+    height: 25px;
+    width: 25px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+  .bigDot {
+    position: absolute;
+    left: -25%;
+    background-color: #ff000000;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    display: flex;
+    border-radius: 50%;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
+    z-index: 1;
+    border: 5px solid;
+  }
+
+  .square {
+    position: absolute;
+    top: 30%;
+    left: -25%;
+    background-color: rgba(255, 0, 0, 0);
+    height: 30%;
+    width: 65%;
+    z-index: -1;
+  }
+
+  :root div.cdk-overlay-container {
+    .cdk-overlay-connected-position-bounding-box {
+            width: 50% !important;
+      }
+  }
+    //div.cdk-overlay-connected-position-bounding-box :root{
+    //    max-width:100% !important;
+    //}
+//
+    //div.cdk-overlay-connected-position-bounding-box{
+    //    max-width:100% !important;
+    //}
+

@@ -1,0 +1,36 @@
+<div class="container">
+    <h2 class="text-center mb-5">Per richieste e preventivi:</h2>
+    <form [formGroup]="FormData" (ngSubmit)="onSubmit(FormData.value)">
+        <table>
+            <tr>
+                <td>
+                    <label for="Email">Email</label>
+                </td>
+                <td>
+                    <input type="email" class="form-control" name="Email" aria-describedby="emailHelp" placeholder="Enter email"formControlName="Email">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="fullname">Nome e Cognome</label>
+                </td>
+                <td>
+                    <input type="text" class="form-control" name="Fullname" placeholder="Full Name" formControlName="Fullname">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="form-group">
+                    <label for="comment">Comment</label>
+                    </div>
+                </td>
+                <td>
+                    <textarea class="form-control" formControlName="Comment" name="Comment">
+                    </textarea>
+                </td>
+            </tr>
+            <button type="submit" class="btn btn-primary" [disabled]="!FormData.valid">Submit</button>
+        </table>
+    </form>
+
+    </div>

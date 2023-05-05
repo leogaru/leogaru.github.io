@@ -1,0 +1,108 @@
+<div id="bodyDesktop">
+  <!--#f2d15875 : giallo
+      rgb(28 72 255 / 69%) : azzurro pastello-->
+  <div style="display:flex; width:100%; align-items:center; justify-content:center; align-content:center; flex-direction:column; padding-top: 20px; font: 100% / 1.5 Arial, Helvetica, sans-serif, 'Arial Narrow Bold', monospace; padding-bottom: 50px;">
+      <div style="width:90%; display:flex; align-items:center; justify-content:center; align-content:center; flex-direction:column; margin: 10px">
+          <button class="topButton" (click)="table1=!table1">
+              <div class = "divButton">
+                  <b>Chi siamo</b>
+                  <mat-icon *ngIf="table1 == true">keyboard_arrow_down</mat-icon>
+                  <mat-icon *ngIf="table1 == false">keyboard_arrow_up</mat-icon>
+              </div>
+          </button>
+          <div [class]="table1== true ? 'open' : 'close'" style="transition: all 1s cubic-bezier(0.1, 0.84, 0.12, 0.98);">
+              <div [class]="table1== true ? 'openHideTable' && 'openInnerTable' : 'closeHideTable' && 'closeHideTable'">
+                  <div style="width: 100%; display: flex; flex-direction: column; align-items: center;">
+                      <div [class]="table1 == true ? 'openInnerTable' && 'openHideTable' : 'closeInnerTable' && 'closeHideTable'" style="width: 80%;text-align: center; padding: 8px;">
+                          Ditta specializzata nell'installazione di impianti elettrici operante da più di cinquant'anni nel territorio di Cesena e d'intorni.<br> Grazie all'esperienza maturata negli anni, siamo in grado di garantire la massima qualità nella realizzazione dei nostri servizi.
+                          <div style="width: 80%;text-align: center; padding: 15px;">
+                              Offriamo un'attenta gestione dei cantieri per assicurare la massima tranquillità e affidabilità ai nostri clienti.
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div style="width:90%; display:flex; align-items:center; justify-content:center; align-content:center; flex-direction:column; margin: 10px">
+          <button  (click)="table2 = !table2">
+              <div class = "divButton">
+                  <b>I nostri lavori</b>
+                  <mat-icon *ngIf="table2 == true">keyboard_arrow_down</mat-icon>
+                  <mat-icon *ngIf="table2 == false">keyboard_arrow_up</mat-icon>
+              </div>
+          </button>
+          <div [class]="table2 == true ? 'open' : 'close'">
+              <div [class]="table2 == true ? 'openInnerTable' : 'closeInnerTable'">
+                  <table [class]="table2 == true ? 'openHideTable' : 'closeHideTable'" style="width: 80%;text-align: center; padding: 8px;">
+                      <tr>
+                          <td>
+                              <div style="width: 80%;text-align: center; padding: 15px;">
+                                  Siamo <b>Specializzati</b> in tutti i tipi di <b>impianti elettrici</b>:
+                              </div>
+                          </td>
+                          <td>
+                              <ul>
+                                  <li>Interni civili</li>
+                                  <li>Esterni</li>
+                                  <li>Clinici</li>
+                                  <li>Industriali</li>
+                                  <li>Stradali</li>
+                                  <li>Videosorveglianza</li>
+                                  <li>Allarmi Incendio</li>
+                                  <li>Allarmi Antintrusione</li>
+                                  <li>Rete Dati</li>
+                              </ul> 
+                          </td>
+                      </tr> 
+                  </table>
+                  <div style="width: 80%;text-align: center; padding: 15px;">
+                      e nelle loro <b>manutenzioni</b>.
+                      <br>
+                      <br>
+                          Abbiamo eseguito numerose opere nel corso degli anni sia per enti privati che pubblici.
+                          <br>
+                          Ad esempio:
+                          <br>
+                          <ul>
+                              <li>Illuminazione pubblica</li>
+                              <li>Lavori di manutenzione nell scuole del cesenate</li>
+                              <li>Realizzazione dei nuovi impianti elettrici per la casa di cura malatesta novello di Cesena.</li>
+                          </ul>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div style="width:90%; display:flex; align-items:center; justify-content:center; align-content:center; flex-direction:column; margin: 10px">
+          <button class="bottomButton" (click)="table3 = !table3">
+              <div class = "divButton">
+                  <b>Contattaci</b>
+                  <mat-icon *ngIf="table3 == true">keyboard_arrow_down</mat-icon>
+                  <mat-icon *ngIf="table3 == false">keyboard_arrow_up</mat-icon>
+              </div>
+          </button>
+          <div [class]="table3 == true ? 'open'  : 'close'" >
+              <div [class]="table3 == true ? 'openInnerTable' : 'closeInnerTable'" style="display: flex; flex-direction: column; align-items: center;">
+                  <ul>
+                      <li>
+                          Giovanni : <a href="tel:3355615764">3355615764</a>
+                      </li>
+                      <li>
+                          Paolo : <a href="tel:3356149384">3356149384</a>
+                      </li>
+                      <li>
+                          Luca : <a href="tel:3409455889">3409455889</a>
+                      </li>
+                      <li>
+                          Ufficio : <a href="tel:0547 313346">0547/313346</a>
+                      </li>
+                      <li>
+                          Email : <a href="mailto:venturifratelli@gmail.com">venturifratelli@gmail.com</a> (magari per l'email utilizzare il dominio del sito)
+                      </li>
+                  </ul>
+                  <iframe *ngIf="table3==true" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2863.222997674935!2d12.247008867459103!3d44.14064655430848!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132ca4cec9386c05%3A0x4c3652b784504e1d!2sFratelli%20Venturi%20Di%20Paolo%20E%20Giovanni%20S.r.l!5e0!3m2!1sit!2sit!4v1676366285611!5m2!1sit!2sit" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" passive="true"></iframe>
+                  <app-contact-form></app-contact-form>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>

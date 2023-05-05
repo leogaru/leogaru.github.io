@@ -1,0 +1,192 @@
+#bodyDesktop ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  /* Track */
+#bodyDesktop ::-webkit-scrollbar-track {
+      background: #f2d15866;
+      -moz-box-shadow:  0px  8px 5px #f2d15866;
+      -webkit-box-shadow:  0px  8px 5px #f2d15866;
+      filter: progid:DXImageTransform.Microsoft.Shadow(color='#f2d15866', Direction=135, Strength=10);
+      box-shadow: 0px 8px 5px #f2d15866;
+  }
+
+  /* Handle */
+#bodyDesktop ::-webkit-scrollbar-thumb {
+    background: black;
+  }
+
+  /* Handle on hover */
+#bodyDesktop ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+
+  #bodyDesktop {
+      margin: 0px;
+      max-height: calc(100% - 135px);
+      padding-top: 80px;
+  }
+  /*
+  word-wrap: break-word;
+    white-space: pre-wrap;
+    word-break: normal;
+    */
+
+/* Inizio desktop*/
+
+#bodyDesktop button {
+      width: 80%; 
+      border: 0px; 
+      height: 35px;
+      border: 2px solid rgb(24 25 108);
+      cursor: pointer;
+      background-color: rgba(242,209,88,0.4);
+      color:rgb(24 25 108);
+      font: 130% Arial, Helvetica, sans-serif, 'Arial Narrow Bold', monospace;
+  }
+  #bodyDesktop button:hover {
+    width: 80%; 
+    border: 0px; 
+    height: 35px;
+    border: 2px solid rgb(24 25 108);
+    cursor: pointer;
+    background-color: rgba(219, 186, 66, 0.4);
+    color:rgb(24 25 108);
+    font: 130% Arial, Helvetica, sans-serif, 'Arial Narrow Bold', monospace;
+}
+#bodyDesktop .topButton {
+      border-radius: 10px 10px 0px 0px; 
+  }
+#bodyDesktop .bottomButton {
+      border-radius: 0px 0px 10px 10px; 
+  } 
+
+  /* Fine desktop*/
+/* Inizio smartphone */
+#bodySmartphone {
+  width:100vw
+}
+#bodySmartphone header {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  background-color: white;
+  height: 80px;
+  box-shadow: 10px #dedede;
+}
+#bodySmartphone  header>div#Logo {
+      background-color: white;
+      width: auto;
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+}
+#bodySmartphone #LogoStyle {
+height:80px;
+width: auto;
+box-shadow: -7px 7px 5px rgb(24 25 108);
+}
+#bodySmartphone header>div#Title {
+  background-color: #f2d15875;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -moz-box-shadow:  0px  8px 5px #f2d15866;
+  -webkit-box-shadow:  0px  8px 5px #f2d15866;
+  filter: progid:DXImageTransform.Microsoft.Shadow(color='#f2d15866', Direction=135, Strength=10);
+  box-shadow: 0px 8px 5px #f2d15866;
+}
+  #bodySmartphone button {
+      width: 80%; 
+      border: 0px; 
+      height: 35px;
+      border: 2px solid rgb(24 25 108);
+      cursor: pointer;
+      background-color: rgba(242,209,88,0.4);
+      color:rgb(24 25 108);
+      font: 130% Inconsolata, monospace;
+  }
+  #bodySmartphone .topButton {
+      border-radius: 10px 10px 0px 0px; 
+  }
+  #bodySmartphone .bottomButton {
+      border-radius: 0px 0px 10px 10px; 
+  }
+  #bodySmartphone .open {
+      width:80%; 
+      display: block;
+      margin-top: 5px; 
+      max-height: 1000px;
+      transition: all 0.5s linear; 
+      font-size: 20px;
+  }
+
+.divButton{
+    display: flex; 
+    justify-content: center;
+}
+/* Fine smartphone */
+.font1Prova{
+  font-family: Arial, Helvetica, sans-serif, 'Arial Narrow Bold';
+}
+.font2Prova{
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.font3Prova{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.open {
+      width:80%; 
+      display: block;
+      margin-top: 5px; 
+      max-height: 1000px;
+      transition: all 0.5s linear; 
+      font-size: 20px;
+  }
+
+.openInnerTable {
+    border-left: 5px dotted rgb(24 25 108);
+    border-right: 5px dotted rgb(24 25 108);
+    border-bottom: 5px dotted rgb(24, 25, 108);;
+}
+
+.openHideTable{
+    transition: all 1s cubic-bezier(0.1, 0.84, 0.12, 0.98);
+    max-height: 1000px;
+    font-size: 20px;
+}
+
+.close {
+      width:80%; 
+      display: none;  
+      margin-top: 5px; 
+      height: 0px; 
+  }
+
+.closeInnerTable {
+    border-left: 0px dotted rgb(24 25 108);
+    border-right: 0px dotted rgb(24 25 108);
+    border-bottom:0px dotted rgb(24, 25, 108);
+}
+  
+.closeHideTable{
+    transition: all 0.5s cubic-bezier(0.1, 0.84, 0.12, 0.98);
+    font-size:  0px;
+    max-height: 0px;
+  }
+
+.styleInnerTable {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
+}
+.transition{
+    transition: all 1s cubic-bezier(0.1, 0.84, 0.12, 0.98);
+}
+
+
