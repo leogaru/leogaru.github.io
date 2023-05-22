@@ -1,108 +1,170 @@
-<div id="bodyDesktop">
-  <!--#f2d15875 : giallo
-      rgb(28 72 255 / 69%) : azzurro pastello-->
-  <div style="display:flex; width:100%; align-items:center; justify-content:center; align-content:center; flex-direction:column; padding-top: 20px; font: 100% / 1.5 Arial, Helvetica, sans-serif, 'Arial Narrow Bold', monospace; padding-bottom: 50px;">
-      <div style="width:90%; display:flex; align-items:center; justify-content:center; align-content:center; flex-direction:column; margin: 10px">
-          <button class="topButton" (click)="table1=!table1">
-              <div class = "divButton">
-                  <b>Chi siamo</b>
-                  <mat-icon *ngIf="table1 == true">keyboard_arrow_down</mat-icon>
-                  <mat-icon *ngIf="table1 == false">keyboard_arrow_up</mat-icon>
-              </div>
-          </button>
-          <div [class]="table1== true ? 'open' : 'close'" style="transition: all 1s cubic-bezier(0.1, 0.84, 0.12, 0.98);">
-              <div [class]="table1== true ? 'openHideTable' && 'openInnerTable' : 'closeHideTable' && 'closeHideTable'">
-                  <div style="width: 100%; display: flex; flex-direction: column; align-items: center;">
-                      <div [class]="table1 == true ? 'openInnerTable' && 'openHideTable' : 'closeInnerTable' && 'closeHideTable'" style="width: 80%;text-align: center; padding: 8px;">
-                          Ditta specializzata nell'installazione di impianti elettrici operante da più di cinquant'anni nel territorio di Cesena e d'intorni.<br> Grazie all'esperienza maturata negli anni, siamo in grado di garantire la massima qualità nella realizzazione dei nostri servizi.
-                          <div style="width: 80%;text-align: center; padding: 15px;">
-                              Offriamo un'attenta gestione dei cantieri per assicurare la massima tranquillità e affidabilità ai nostri clienti.
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
-      <div style="width:90%; display:flex; align-items:center; justify-content:center; align-content:center; flex-direction:column; margin: 10px">
-          <button  (click)="table2 = !table2">
-              <div class = "divButton">
-                  <b>I nostri lavori</b>
-                  <mat-icon *ngIf="table2 == true">keyboard_arrow_down</mat-icon>
-                  <mat-icon *ngIf="table2 == false">keyboard_arrow_up</mat-icon>
-              </div>
-          </button>
-          <div [class]="table2 == true ? 'open' : 'close'">
-              <div [class]="table2 == true ? 'openInnerTable' : 'closeInnerTable'">
-                  <table [class]="table2 == true ? 'openHideTable' : 'closeHideTable'" style="width: 80%;text-align: center; padding: 8px;">
-                      <tr>
-                          <td>
-                              <div style="width: 80%;text-align: center; padding: 15px;">
-                                  Siamo <b>Specializzati</b> in tutti i tipi di <b>impianti elettrici</b>:
-                              </div>
-                          </td>
-                          <td>
-                              <ul>
-                                  <li>Interni civili</li>
-                                  <li>Esterni</li>
-                                  <li>Clinici</li>
-                                  <li>Industriali</li>
-                                  <li>Stradali</li>
-                                  <li>Videosorveglianza</li>
-                                  <li>Allarmi Incendio</li>
-                                  <li>Allarmi Antintrusione</li>
-                                  <li>Rete Dati</li>
-                              </ul> 
-                          </td>
-                      </tr> 
-                  </table>
-                  <div style="width: 80%;text-align: center; padding: 15px;">
-                      e nelle loro <b>manutenzioni</b>.
-                      <br>
-                      <br>
-                          Abbiamo eseguito numerose opere nel corso degli anni sia per enti privati che pubblici.
-                          <br>
-                          Ad esempio:
-                          <br>
-                          <ul>
-                              <li>Illuminazione pubblica</li>
-                              <li>Lavori di manutenzione nell scuole del cesenate</li>
-                              <li>Realizzazione dei nuovi impianti elettrici per la casa di cura malatesta novello di Cesena.</li>
-                          </ul>
-                  </div>
-              </div>
-          </div>
-      </div>
-      <div style="width:90%; display:flex; align-items:center; justify-content:center; align-content:center; flex-direction:column; margin: 10px">
-          <button class="bottomButton" (click)="table3 = !table3">
-              <div class = "divButton">
-                  <b>Contattaci</b>
-                  <mat-icon *ngIf="table3 == true">keyboard_arrow_down</mat-icon>
-                  <mat-icon *ngIf="table3 == false">keyboard_arrow_up</mat-icon>
-              </div>
-          </button>
-          <div [class]="table3 == true ? 'open'  : 'close'" >
-              <div [class]="table3 == true ? 'openInnerTable' : 'closeInnerTable'" style="display: flex; flex-direction: column; align-items: center;">
-                  <ul>
-                      <li>
-                          Giovanni : <a href="tel:3355615764">3355615764</a>
-                      </li>
-                      <li>
-                          Paolo : <a href="tel:3356149384">3356149384</a>
-                      </li>
-                      <li>
-                          Luca : <a href="tel:3409455889">3409455889</a>
-                      </li>
-                      <li>
-                          Ufficio : <a href="tel:0547 313346">0547/313346</a>
-                      </li>
-                      <li>
-                          Email : <a href="mailto:venturifratelli@gmail.com">venturifratelli@gmail.com</a> (magari per l'email utilizzare il dominio del sito)
-                      </li>
-                  </ul>
-                  <iframe *ngIf="table3==true" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2863.222997674935!2d12.247008867459103!3d44.14064655430848!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132ca4cec9386c05%3A0x4c3652b784504e1d!2sFratelli%20Venturi%20Di%20Paolo%20E%20Giovanni%20S.r.l!5e0!3m2!1sit!2sit!4v1676366285611!5m2!1sit!2sit" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" passive="true"></iframe>
-                  <app-contact-form></app-contact-form>
-              </div>
-          </div>
-      </div>
-  </div>
+<div class="bodyDesktop">
+    <div style="    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    background-color: #ffffff00;
+    /* margin-top: 20px; */
+    top: 70px;
+    z-index: 0;
+    margin-top: 20px;">
+        <div style="    width: 100%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: sticky;
+        background-color: #ffffff00;
+        /* margin-top: 20px; */
+        top: 50px;
+        z-index: 0;">
+            <div style = "width:70%; position: fixed;
+            /* left: 0; */
+            top: 85;  opacity: 0.9; display: flex; flex-direction: row; margin-top: 30px;  height: auto;     position: sticky;
+    background-color: #ffffff00;
+    /* margin-top: 20px; */
+    top: 5%;
+    z-index: 0;">
+                <button style="border-radius: 10px 0px 0px 10px; border-right: 0px; height: auto;" (click)="table1=!table1; table2=false; table3 = false" [disabled]="table1 == true" [ngClass]="table1 == true ? 'menuButtonClicked' : 'menuButtonUnclicked'">
+                    Chi siamo
+                </button>
+                <button style="border-left: 0px; border-right: 0px;  height: auto;" (click)="table2 = !table2; table1=false; table3 = false" [disabled]="table2 == true"  [ngClass]="table2 == true ? 'menuButtonClicked' : 'menuButtonUnclicked'">
+                    I nostri Lavori
+                </button>
+                <button style="border-radius: 0px 10px 10px 0px; border-left: 0px;  height: auto;" (click)="table3 = !table3; table1=false; table2 = false" [disabled]="table3 == true" [class]="table3 == true ? 'menuButtonClicked' : 'menuButtonUnclicked'">
+                    Contattaci
+                </button>
+            </div>
+        </div>
+    </div>
+    <div id="page">
+        <div id="innerPage">
+            <div *ngIf="table1 == true" class="table font">
+                <div style=" width: 80%;text-align: center; padding-bottom: 15px;">
+                    La nostra ditta è un'affermata azienda operante nel settore dell'installazione di impianti elettrici da più di cinquant'anni nel territorio di Cesena e d'intorni.<br>
+                    La nostra lunga esperienza e solida reputazione sono testimoni della nostra dedizione alla qualità e all'eccellenza nel fornire servizi di alto livello.<br>
+                    La nostra priorità è garantire la massima qualità nella realizzazione dei nostri servizi.<br>
+                    Grazie all'esperienza maturata nel corso degli anni, siamo in grado di offrire soluzioni personalizzate che rispondono alle esigenze specifiche dei nostri clienti.<br>
+                    Ogni progetto viene affrontato con cura e attenzione ai dettagli, garantendo risultati duraturi e affidabili.
+                    La gestione dei cantieri è un aspetto fondamentale del nostro approccio.<br> 
+                    Ci impegniamo a coordinare attentamente ogni fase del processo, dalla pianificazione all'installazione, per garantire un flusso di lavoro efficiente e una conclusione tempestiva dei progetti.<br> 
+                    Ci assicuriamo che i nostri clienti abbiano la massima tranquillità, sapendo che i loro impianti elettrici sono gestiti con professionalità e attenzione.<br>
+                    Oltre all'installazione di impianti elettrici, offriamo una vasta gamma di servizi correlati.<br> 
+                    Questi includono la manutenzione e l'assistenza tecnica degli impianti esistenti, l'implementazione di soluzioni energetiche efficienti e sostenibili, nonché la consulenza e il supporto tecnico specializzato.
+                    La nostra squadra è composta da professionisti altamente qualificati e appassionati del loro lavoro.<br> 
+                    Continuiamo a investire nella formazione e nell'aggiornamento delle nostre competenze per rimanere al passo con le ultime innovazioni nel settore e offrire ai nostri clienti soluzioni all'avanguardia.
+                </div>
+            </div>
+            <div *ngIf="table2 == true" class="table font">
+                <div style="width: 80%;text-align: center; padding-bottom: 15px; font-size: 25;">
+                    Siamo <b>Specializzati</b> in tutti i tipi di <b>impianti elettrici</b>:
+                </div>
+                <table [class]="table2 == true ? 'openHideTable' : 'closeHideTable'" style="width: 80%;text-align: center; padding: 8px;">
+                    <tr>
+                        <td style="width: 50%">
+                            <ul>
+                                <li><button (click)="changeTableButton('interniCivili')" [class]="interniCivili == true ? 'listButtonClicked' : 'listButtonUnclicked'">Interni civili</button></li>
+                                <li><button (click)="changeTableButton('esterni')" [class]="esterni == true ? 'listButtonClicked' : 'listButtonUnclicked'">Esterni</button></li>
+                                <li><button (click)="changeTableButton('clinici')" [class]="clinici == true ? 'listButtonClicked' : 'listButtonUnclicked'">Clinici</button></li>
+                                <li><button (click)="changeTableButton('industriali')" [class]="industriali == true ? 'listButtonClicked' : 'listButtonUnclicked'">Industriali</button></li>
+                                <li><button (click)="changeTableButton('stradali')" [class]="stradali == true ? 'listButtonClicked' : 'listButtonUnclicked'">Stradali</button></li>
+                                <li><button (click)="changeTableButton('videoSorveglianza')" [class]="videoSorveglianza == true ? 'listButtonClicked' : 'listButtonUnclicked'">Videosorveglianza</button></li>
+                                <li><button (click)="changeTableButton('allarmiIncendio')" [class]="allarmiIncendio == true ? 'listButtonClicked' : 'listButtonUnclicked'">Allarmi Incendio</button></li>
+                                <li><button (click)="changeTableButton('allarmiAntintrusione')" [class]="allarmiAntintrusione == true ? 'listButtonClicked' : 'listButtonUnclicked'">Allarmi Antintrusione</button></li>
+                                <li><button (click)="changeTableButton('reteDati')" [class]="reteDati == true? 'listButtonClicked' : 'listButtonUnclicked'">Rete Dati</button></li>
+                            </ul> 
+                        </td>
+                        <td>
+                            <div *ngIf="this.interniCivili == true" class="description">
+                                Gli impianti elettrici interni civili sono sistemi installati negli edifici residenziali per fornire energia elettrica alle abitazioni.<br>
+                                Essi coprono le esigenze domestiche come l'illuminazione degli ambienti, l'alimentazione di elettrodomestici e la connessione di dispositivi elettronici.<br>
+                                I principali componenti di questi impianti includono il pannello di distribuzione, i circuiti elettrici, le prese di corrente, l'illuminazione, il cablaggio elettrico e i dispositivi di sicurezza.<br>
+                                È fondamentale che gli impianti elettrici interni civili siano progettati, installati e mantenuti da elettricisti qualificati, conformemente alle norme di sicurezza e agli standard elettrici locali, per garantire un ambiente sicuro e funzionale.
+                            </div>
+                            <div *ngIf="this.esterni == true" class="description">
+                                Gli impianti elettrici esterni sono sistemi elettrici installati all'esterno di edifici o spazi aperti per fornire energia elettrica alle aree o apparecchiature all'aperto.<br>
+                                Essi comprendono l'illuminazione esterna, l'alimentazione per attrezzature esterne e i punti di distribuzione esterna.<br>
+                                Gli impianti devono essere progettati e installati in conformità alle norme di sicurezza e agli standard elettrici, garantendo la resistenza alle condizioni ambientali e la prevenzione di rischi come scosse elettriche.
+                            </div>
+                            <div *ngIf="this.clinici == true" class="description">
+                                Gli impianti elettrici clinici sono sistemi specializzati installati nelle strutture sanitarie per fornire energia elettrica sicura e affidabile per supportare le attività mediche.<br>
+                                Essi devono rispettare elevati standard di sicurezza e affidabilità e includono alimentazione di emergenza, cablaggio speciale, dispositivi di protezione, punti di alimentazione specializzati e monitoraggio e manutenzione adeguati.<br>
+                                Gli impianti elettrici clinici sono regolamentati da norme specifiche per garantire l'installazione e il funzionamento sicuro nelle strutture sanitarie.
+                            </div>
+                            <div *ngIf="this.industriali == true" class="description">
+                                Gli impianti elettrici industriali sono complessi sistemi elettrici utilizzati nell'ambito industriale per alimentare e supportare le attività di produzione, i macchinari e gli impianti.<br>
+                                Essi forniscono energia elettrica sicura e ad alta capacità, gestiscono carichi elevati, alimentano motori di grandi dimensioni, controllano processi automatizzati e garantiscono la sicurezza degli operatori e degli impianti.<br>
+                                Gli aspetti chiave includono alimentazione ad alta tensione, quadri elettrici e sottostazioni, controllo e automazione, motori elettrici, sicurezza e protezione.<br>
+                                Gli impianti elettrici industriali devono essere progettati, installati e mantenuti da personale qualificato in conformità con le normative e gli standard di sicurezza specifici del settore industriale.
+                            </div>
+                            <div *ngIf="this.stradali == true" class="description">
+                                Gli impianti elettrici stradali sono sistemi elettrici installati lungo le strade e le autostrade per fornire illuminazione e alimentazione per la segnaletica stradale e la gestione del traffico.<br>
+                                Essi includono illuminazione pubblica, segnaletica stradale, sistemi di monitoraggio del traffico, sistemi di gestione del traffico e distribuzione dell'energia.<br>
+                                Gli impianti elettrici stradali sono cruciali per garantire la sicurezza stradale, migliorare la visibilità e fornire energia ai dispositivi di segnalazione e controllo del traffico.<br>
+                                La progettazione, l'installazione e la manutenzione di tali impianti devono essere effettuate da professionisti qualificati in conformità con le normative locali.
+                            </div>
+                            <div *ngIf="this.videoSorveglianza == true" class="description">
+                                Gli impianti di videosorveglianza, noti anche come sistemi di videosorveglianza o CCTV (Closed-Circuit Television), sono utilizzati per monitorare e registrare attività e comportamenti in diverse aree.<br>
+                                Questi impianti includono telecamere di sorveglianza, dispositivi di registrazione, monitor, reti e software di gestione.<br>
+                                Vengono impiegati per scopi di sicurezza e sorveglianza in edifici commerciali, residenziali, pubblici, industriali e infrastrutture critiche.<br>
+                                L'uso dei sistemi di videosorveglianza deve essere in conformità alle leggi sulla privacy e rispettare i diritti delle persone.
+                            </div>
+                            <div *ngIf="this.allarmiIncendio == true" class="description">                               
+                                Gli allarmi antincendio sono dispositivi e sistemi progettati per rilevare tempestivamente la presenza di incendi e avvertire le persone del pericolo.<br>
+                                Utilizzano rilevatori di fumo, calore e fiamma per identificare l'incendio e attivare l'allarme.<br>
+                                I pannelli di controllo monitorano i segnali dei rilevatori e i dispositivi di segnalazione avvisano le persone presenti nell'area.<br>
+                                Gli allarmi possono anche essere collegati a sistemi di notifica esterni per richiedere l'intervento dei soccorsi.<br>
+                                Sono obbligatori in molti edifici e la corretta installazione e manutenzione sono cruciali per garantire la loro efficacia.
+                            </div>
+                            <div *ngIf="this.allarmiAntintrusione == true" class="description">                               
+                                Gli allarmi anti intrusione sono dispositivi e sistemi progettati per rilevare e segnalare intrusioni indesiderate in un'area protetta, come una casa o un edificio commerciale.<br>
+                                Il loro obiettivo principale è proteggere la proprietà e le persone da atti criminali e intrusioni non autorizzate.<br>
+                                I componenti comuni di un sistema di allarme anti intrusione includono sensori di movimento, sensori di apertura, tastiere o telecomandi, sirene o segnalatori acustici, notifiche remote e videocamere di sorveglianza.<br>
+                                Questi componenti lavorano insieme per rilevare l'attività sospetta e attivare un allarme che avvisa le persone interessate e/o le autorità competenti.<br>
+                                L'installazione e la manutenzione professionali sono fondamentali per garantire il corretto funzionamento e la massima efficacia di questi sistemi di sicurezza.
+                            </div>
+                            <div *ngIf="this.reteDati == true" class="description">                               
+                                Sistemi di interconnessione che consentono lo scambio di informazioni digitali tra dispositivi informatici.<br>
+                                Queste reti facilitano la trasmissione di dati tra computer, server, dispositivi mobili e altri dispositivi connessi, sia a livello locale che globale.<br>
+                                Le reti dati sono fondamentali per la comunicazione e lo scambio di informazioni nell'era digitale.<br>
+                                Sono utilizzate in diverse forme, come le reti di area locale (LAN), le reti di area estesa (WAN), le reti wireless, le reti virtuali private (VPN) e le reti di telecomunicazioni.<br>
+                                Queste reti sono composte da vari componenti come router, switch, modem, cavi di rete, protocolli di comunicazione e software di gestione di rete.<br>
+                                È necessaria un'esperienza specializzata in networking e sicurezza informatica per progettare, installare e gestire reti dati affidabili e sicure.
+                            </div>
+                        </td>
+                    </tr> 
+                </table>
+                <div style="width: 80%;text-align: center; padding: 15px; font-size: 25;">
+                    e nelle loro <b>manutenzioni</b>.
+                    <br>
+                    
+                </div>
+            </div>
+            <div *ngIf="table3 == true">
+                <div [class]="table3 == true ? 'openInnerTable' : 'closeInnerTable'" style="display: flex; flex-direction: column; align-items: center;">
+                    <ul>
+                        <li>
+                            Giovanni : <a href="tel:3355615764">3355615764</a>
+                        </li>
+                        <li>
+                            Paolo : <a href="tel:3356149384">3356149384</a>
+                        </li>
+                        <li>
+                            Luca : <a href="tel:3409455889">3409455889</a>
+                        </li>
+                        <li>
+                            Ufficio : <a href="tel:0547 313346">0547/313346</a>
+                        </li>
+                        <li>
+                            Email : <a href="mailto:venturifratelli@gmail.com">venturifratelli@gmail.com</a> (magari per l'email utilizzare il dominio del sito)
+                        </li>
+                    </ul>
+                    <iframe *ngIf="table3==true" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2863.222997674935!2d12.247008867459103!3d44.14064655430848!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132ca4cec9386c05%3A0x4c3652b784504e1d!2sFratelli%20Venturi%20Di%20Paolo%20E%20Giovanni%20S.r.l!5e0!3m2!1sit!2sit!4v1676366285611!5m2!1sit!2sit" style="border:0; width: 100%; height: auto;" allowfullscreen="false" loading="lazy" referrerpolicy="no-referrer-when-downgrade" passive="true"></iframe>
+                    <app-contact-form></app-contact-form>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

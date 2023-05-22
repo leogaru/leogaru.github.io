@@ -11,51 +11,71 @@ export class DesktopComponent {
   table3 = false
   map = false
   elementHeight = 0
-  show(nr: number){
-    switch (nr){
-      case nr = 1 : {
-        this.table1 = !this.table1
+
+  interniCivili= true
+  esterni = false
+  clinici= false
+  industriali = false
+  stradali = false
+  videoSorveglianza = false
+  allarmiIncendio = false
+  allarmiAntintrusione = false
+  reteDati = false
+  
+  value = ""
+  
+  changeTableButton(element: string){
+    this.interniCivili= false
+    this.esterni = false
+    this.clinici= false
+    this.industriali = false
+    this.stradali = false
+    this.videoSorveglianza = false
+    this.allarmiIncendio = false
+    this.allarmiAntintrusione = false
+    this.reteDati = false
+    switch (element){
+      case element = "interniCivili":
+        this.interniCivili= true
+        break
+      case element = "esterni":
+        this.esterni= true
+        break
+      case element = "clinici":
+        this.clinici= true
+        break
+      case element = "industriali":
+        this.industriali= true
+        break
+      case element = "stradali":
+        this.stradali= true
+        break
+      case element = "videoSorveglianza":
+        this.videoSorveglianza= true
+        break
+      case element = "allarmiIncendio":
+        this.allarmiIncendio= true
+        break
+      case element = "allarmiAntintrusione":
+        this.allarmiAntintrusione= true
+        break
+      case element = "reteDati":
+        this.reteDati= true
         break
       }
-      case nr = 2 : {
-        this.table2 = !this.table2
-        break
-      }
-      case nr = 3 : {
-        this.table3 = !this.table3
-      }
-    }
-    var element = document.querySelector("#table"+nr)
-    var elementHeight = document.querySelector<HTMLElement>("#table"+nr)!.offsetHeight!;
-    console.log(elementHeight)
-    if (elementHeight > 0){
-        document.getElementById("table"+nr)!.style.maxHeight="0px"
-        document.getElementById("table"+nr)!.style.fontSize="0px"
-        document.getElementById("innerTable"+nr)!.style.borderLeft="0px dotted rgb(24 25 108)"
-        document.getElementById("innerTable"+nr)!.style.borderRight="0px dotted rgb(24 25 108)"
-        if (nr == 2){
-            document.getElementById("hidetable"+nr)!.style.transition="all 0.5s cubic-bezier(0.1, 0.84, 0.12, 0.98)"
-            document.getElementById("hidetable"+nr)!.style.fontSize="0px"
-        }
-        document.getElementById("table"+nr)!.style.transition="all 0.5s cubic-bezier(0.1, 0.84, 0.12, 0.98)"
-    }
-    else if (elementHeight == 0){
-        document.getElementById("table"+nr)!.style.maxHeight="1000px"
-        document.getElementById("table"+nr)!.style.fontSize="20px"
-        document.getElementById("innerTable"+nr)!.style.borderLeft="5px dotted rgb(24 25 108)"
-        document.getElementById("innerTable"+nr)!.style.borderRight="5px dotted rgb(24 25 108)"
-        if (nr == 2){
-            console.log("hidetable"+nr)
-            document.getElementById("hidetable"+nr)!.style.transition="all 1s cubic-bezier(0.1, 0.84, 0.12, 0.98)"
-            document.getElementById("hidetable"+nr)!.style.fontSize="20px"
-        }
-        document.getElementById("table"+nr)!.style.transition="all 1s cubic-bezier(0.1, 0.84, 0.12, 0.98)"
-    }
-    if ( nr== 3) {
-      this.showMap() 
-    }
+    console.log(this.interniCivili)
+    console.log(this.esterni)
+    console.log(this.clinici)
+    this.value = element
+    console.log(element)
+    console.log(this.interniCivili)
+    console.log(this.esterni)
+    console.log(this.clinici)
   }
 
+  checkLog(){
+    console.log("Funziona")
+  }
   showMap(){
     this.map= !this.map
   }
