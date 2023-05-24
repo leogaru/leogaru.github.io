@@ -1,3 +1,4 @@
+<!doctype html>
 <div class="bodyDesktop">
     <div style="    width: 100%;
     height: auto;
@@ -43,14 +44,27 @@
         <div id="innerPage">
             <div *ngIf="table1 == true" class="table font">
                 <div style=" width: 80%;text-align: center; padding-bottom: 15px;">
-                    La nostra ditta è un'affermata azienda operante nel settore dell'installazione di impianti elettrici da più di cinquant'anni nel territorio di Cesena e d'intorni.<br>
-                    La nostra lunga esperienza e solida reputazione sono testimoni della nostra dedizione alla qualità e all'eccellenza nel fornire servizi di alto livello.<br>
+                    La nostra ditta opera nel settore dell'installazione di impianti elettrici da più di cinquant'anni nel territorio di Cesena e d'intorni.<br>
+                    La nostra lunga esperienza è testimone della nostra dedizione alla qualità e all'eccellenza nel fornire servizi di alto livello.<br>
                     La nostra priorità è garantire la massima qualità nella realizzazione dei nostri servizi.<br>
-                    Grazie all'esperienza maturata nel corso degli anni, siamo in grado di offrire soluzioni personalizzate che rispondono alle esigenze specifiche dei nostri clienti.<br>
-                    Ogni progetto viene affrontato con cura e attenzione ai dettagli, garantendo risultati duraturi e affidabili.
-                    La gestione dei cantieri è un aspetto fondamentale del nostro approccio.<br> 
-                    Ci impegniamo a coordinare attentamente ogni fase del processo, dalla pianificazione all'installazione, per garantire un flusso di lavoro efficiente e una conclusione tempestiva dei progetti.<br> 
-                    Ci assicuriamo che i nostri clienti abbiano la massima tranquillità, sapendo che i loro impianti elettrici sono gestiti con professionalità e attenzione.<br>
+                </div>
+                <div style=" width: 80%;text-align: center; padding-bottom: 15px;">
+                    <table>
+                        <tr>
+                            <td class="font">
+                                <div style="width:90%; display:flex; align-items: center; justify-content: center;">
+                                    Grazie all'esperienza maturata nel corso degli anni, siamo in grado di offrire soluzioni personalizzate che rispondono alle esigenze specifiche dei nostri clienti.<br>
+                                    Ogni progetto viene affrontato con cura e attenzione ai dettagli, garantendo risultati duraturi e affidabili.<br>
+                                    Ci assicuriamo che i nostri clienti abbiano la massima tranquillità, sapendo che i loro impianti elettrici sono gestiti con professionalità e attenzione.<br>
+                                </div>
+                            </td>
+                            <td>
+                                <img src="assets/resources/newImage1.jpg" alt="FirstImage" id="LogoStyleMobile" style="width:100%; height:auto">
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div style=" width: 80%;text-align: center; padding-bottom: 15px;">
                     Oltre all'installazione di impianti elettrici, offriamo una vasta gamma di servizi correlati.<br> 
                     Questi includono la manutenzione e l'assistenza tecnica degli impianti esistenti, l'implementazione di soluzioni energetiche efficienti e sostenibili, nonché la consulenza e il supporto tecnico specializzato.
                     La nostra squadra è composta da professionisti altamente qualificati e appassionati del loro lavoro.<br> 
@@ -59,7 +73,7 @@
             </div>
             <div *ngIf="table2 == true" class="table font">
                 <div style="width: 80%;text-align: center; padding-bottom: 15px; font-size: 25;">
-                    Siamo <b>Specializzati</b> in tutti i tipi di <b>impianti elettrici</b>:
+                    Siamo <b>Specializzati</b> in tutti i tipi di <b>impianti elettrici</b> e nelle loro <b>manutenzioni</b>:
                 </div>
                 <table [class]="table2 == true ? 'openHideTable' : 'closeHideTable'" style="width: 80%;text-align: center; padding: 8px;">
                     <tr>
@@ -136,15 +150,13 @@
                         </td>
                     </tr> 
                 </table>
-                <div style="width: 80%;text-align: center; padding: 15px; font-size: 25;">
-                    e nelle loro <b>manutenzioni</b>.
-                    <br>
-                    
-                </div>
             </div>
             <div *ngIf="table3 == true">
-                <div [class]="table3 == true ? 'openInnerTable' : 'closeInnerTable'" style="display: flex; flex-direction: column; align-items: center;">
-                    <ul>
+                <div style="display: flex; flex-direction: column; align-items: center; padding-bottom: 20px;">
+                    <div>
+                        <h2>I nostri contatti</h2>
+                    </div>
+                    <ul class="font"  style="margin: 0px;">
                         <li>
                             Giovanni : <a href="tel:3355615764">3355615764</a>
                         </li>
@@ -158,11 +170,26 @@
                             Ufficio : <a href="tel:0547 313346">0547/313346</a>
                         </li>
                         <li>
-                            Email : <a href="mailto:venturifratelli@gmail.com">venturifratelli@gmail.com</a> (magari per l'email utilizzare il dominio del sito)
+                            Email : <a href="mailto:venturifratelli@gmail.com">venturifratelli@gmail.com</a>
                         </li>
                     </ul>
-                    <iframe *ngIf="table3==true" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2863.222997674935!2d12.247008867459103!3d44.14064655430848!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132ca4cec9386c05%3A0x4c3652b784504e1d!2sFratelli%20Venturi%20Di%20Paolo%20E%20Giovanni%20S.r.l!5e0!3m2!1sit!2sit!4v1676366285611!5m2!1sit!2sit" style="border:0; width: 100%; height: auto;" allowfullscreen="false" loading="lazy" referrerpolicy="no-referrer-when-downgrade" passive="true"></iframe>
-                    <app-contact-form></app-contact-form>
+                </div>
+                <div style="width: 100%;
+                display: flex;
+                height: 100%;
+                flex-direction: column;
+                align-items: center;">
+                    <div>
+                        <h2>Dove siamo</h2>
+                    </div>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2863.222997674935!2d12.247008867459103!3d44.14064655430848!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132ca4cec9386c05%3A0x4c3652b784504e1d!2sFratelli%20Venturi%20Di%20Paolo%20E%20Giovanni%20S.r.l!5e0!3m2!1sit!2sit!4v1676366285611!5m2!1sit!2sit" style="border:0; width: 70%; height: 100%;" allowfullscreen="false" loading="lazy" referrerpolicy="no-referrer-when-downgrade" passive="true"></iframe>
+                </div>
+                <div style="width: 100%;
+                display: flex;
+                height: 100%;
+                flex-direction: column;
+                align-items: center;">
+                    <app-contact-form style="width:100%"></app-contact-form>
                 </div>
             </div>
         </div>

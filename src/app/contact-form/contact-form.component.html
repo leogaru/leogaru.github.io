@@ -1,32 +1,46 @@
-<div class="container">
+<!doctype html>
+<div class="container" style="display: flex;
+flex-direction: column;
+align-items: center;">
     <h2 class="text-center mb-5">Per richieste e preventivi:</h2>
-    <form [formGroup]="FormData" (ngSubmit)="onSubmit(FormData.value)">
-        <table>
-            <tr>
-                <td>
+    <form [formGroup]="FormData" (ngSubmit)="onSubmit(FormData.value)" style="width: 100%; display: flex;
+    justify-content: center;">
+        <table style="width:70%">
+            <tr class="font">
+                <td class="width5">
                     <label for="Email">Email</label>
                 </td>
-                <td>
-                    <input type="email" class="form-control" name="Email" aria-describedby="emailHelp" placeholder="Enter email"formControlName="Email">
+                <td class="width5">
+                    <mat-form-field class="width10">
+                        <input matInput type="email" class="form-control" name="Email" aria-describedby="emailHelp" placeholder="Enter email" formControlName="Email">
+                    </mat-form-field>
                 </td>
             </tr>
-            <tr>
-                <td>
+            <tr class="font">
+                <td class="width5">
                     <label for="fullname">Nome e Cognome</label>
                 </td>
-                <td>
-                    <input type="text" class="form-control" name="Fullname" placeholder="Full Name" formControlName="Fullname">
+                <td class="width5">
+                    <mat-form-field class="width10">
+                        <input matInput type="text" class="form-control" name="Fullname" placeholder="Full Name" formControlName="Fullname">
+                    </mat-form-field>
                 </td>
             </tr>
-            <tr>
-                <td>
+            <tr class="font">
+                <td class="width5">
                     <div class="form-group">
-                    <label for="comment">Comment</label>
+                    <label for="comment">Richiesta</label>
                     </div>
                 </td>
-                <td>
-                    <textarea class="form-control" formControlName="Comment" name="Comment">
-                    </textarea>
+                <td class="width5">
+                    <mat-form-field class="font1 width10">
+                        <!--<mat-label>Autosize textarea</mat-label>-->
+                        <textarea matInput
+                                  cdkTextareaAutosize
+                                  #autosize="cdkTextareaAutosize"
+                                  cdkAutosizeMinRows="1"
+                                  cdkAutosizeMaxRows="10" class="form-control" formControlName="Comment" name="Comment" style="max-width: 100%;"></textarea>
+                      </mat-form-field>
                 </td>
             </tr>
             <button type="submit" class="btn btn-primary" [disabled]="!FormData.valid">Submit</button>

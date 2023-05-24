@@ -17,6 +17,13 @@
             </div>
         </div>
     </header>
+    <header *ngIf="type == 'tablet'" id="hDesktop">
+        <div id = "Title"> <!-- Impostare un background color-->
+            <div id="LogoDesktop">
+                <img src="assets/resources/logo-01.png" alt="LOGO" id="LogoStyleDesktop">
+            </div>
+        </div>
+    </header>
     <header *ngIf="type == 'mobile'" id ="hMobile">
         <div id = "Title"> <!-- Impostare un background color-->
             <div id="LogoMobile">
@@ -24,8 +31,9 @@
             </div>
         </div>
     </header>
-    <app-desktop *ngIf="type == 'desktop' || null" id="desktop"></app-desktop>
-    <app-smartphone *ngIf="type == 'mobile' || null" id = "mobile" ></app-smartphone>
+    <app-desktop *ngIf="type == 'desktop'" id="desktop"></app-desktop>
+    <app-desktop *ngIf="type == 'tablet'" id="desktop"></app-desktop>
+    <app-smartphone *ngIf="type == 'mobile'" id = "mobile" ></app-smartphone>
     <footer>
         <div id="divFooter">
         </div>

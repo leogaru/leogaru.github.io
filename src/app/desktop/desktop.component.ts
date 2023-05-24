@@ -63,14 +63,7 @@ export class DesktopComponent {
         this.reteDati= true
         break
       }
-    console.log(this.interniCivili)
-    console.log(this.esterni)
-    console.log(this.clinici)
     this.value = element
-    console.log(element)
-    console.log(this.interniCivili)
-    console.log(this.esterni)
-    console.log(this.clinici)
   }
 
   checkLog(){
